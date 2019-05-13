@@ -1,0 +1,16 @@
+{
+    "name": "lasselehtinen/laravel-conventions-checker",
+    "description": "grumphp config to automatically check conventions for Laravel projects",
+    "license": "MIT",
+    "authors": [{
+        "name": "Lasse Lehtinen",
+        "email": "lasse.lehtinen@iki.fi"
+    }],
+    "require": {
+        "phpro/grumphp": "^0.15",
+        "phpmd/phpmd": "^2.6",        
+        "sensiolabs/security-checker": "^5.0",
+        "squizlabs/php_codesniffer": "^3.2",
+        "nunomaduro/larastan": "^0.3.11"
+    }
+}

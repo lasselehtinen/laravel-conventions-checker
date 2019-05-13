@@ -1,0 +1,39 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    ascii:
+        failed: null
+        succeeded: null
+    process_timeout: 600
+    testsuites:
+      style:
+          tasks:
+            - composer
+            - phpcs
+            - phpmd
+      static:
+          tasks:
+            - phpstan
+    tasks:
+      composer:
+          metadata: {priority: 700}
+      securitychecker:
+          metadata: {priority: 600}
+      git_blacklist:
+          keywords: [die(, var_dump(, exit;]
+          metadata: {priority: 500}
+      phpcs:
+          standard: PSR2
+          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/', , '/^test(.*)/']
+          metadata: {priority: 400}
+      phpstan:
+          ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/'] 
+          configuration: vendor/lasselehtinen/laravel-conventions-checker/phpstan.neon          
+          level: 5          
+          metadata: {priority: 300}
+      phpmd:
+          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/']          
+          ruleset: ['vendor/lasselehtinen/laravel-conventions-checker/ruleset.xml']
+          metadata: {priority: 200}          
+      phpunit:
+          metadata: {priority: 100}
