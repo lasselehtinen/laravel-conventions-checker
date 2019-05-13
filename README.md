@@ -22,11 +22,3 @@ For application project:
 composer require --dev lasselehtinen/laravel-conventions-checker
 ```
 
-## Test suites
-
-The config supports the following test suites, which run only part of the tests.
-
-### Style
-
-* 
-
