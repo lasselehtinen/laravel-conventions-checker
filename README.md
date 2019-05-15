@@ -37,4 +37,3 @@ vendor/bin/grumphp run --testsuite=static
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
-```
