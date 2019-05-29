@@ -26,6 +26,7 @@ parameters:
           standard: PSR2
           whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/', , '/^test(.*)/']
           metadata: {priority: 400}
+          exclude: ['Generic.Files.LineLength']
       phpstan:
           ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/'] 
           configuration: vendor/lasselehtinen/laravel-conventions-checker/phpstan.neon          
