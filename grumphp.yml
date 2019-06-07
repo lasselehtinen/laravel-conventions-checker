@@ -28,7 +28,7 @@ parameters:
           metadata: {priority: 400}
           exclude: ['Generic.Files.LineLength']
       phpstan:
-          ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/'] 
+          ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/', '/deploy.php/']
           configuration: vendor/lasselehtinen/laravel-conventions-checker/phpstan.neon          
           level: 5          
           metadata: {priority: 300}
