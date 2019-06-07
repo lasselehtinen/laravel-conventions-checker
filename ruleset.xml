@@ -13,6 +13,7 @@
     <!-- Import the entire unused code rule set -->
     <rule ref="rulesets/unusedcode.xml">
         <exclude name="UnusedLocalVariable"/>
+        <exclude name="UnusedFormalParameter"/>
     </rule>
     <rule ref="rulesets/codesize.xml" />
     <rule ref="rulesets/cleancode.xml">
