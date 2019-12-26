@@ -11,6 +11,6 @@
         "phpmd/phpmd": "^2.7",
         "sensiolabs/security-checker": "^6.0",
         "squizlabs/php_codesniffer": "^3.4",
-        "nunomaduro/larastan": "^0.4"
+        "nunomaduro/larastan": "^0.5"
     }
 }
