@@ -1,6 +1,4 @@
-parameters:
-    git_dir: .
-    bin_dir: vendor/bin
+grumphp:
     ascii:
         failed: null
         succeeded: null
@@ -29,12 +27,12 @@ parameters:
           exclude: ['Generic.Files.LineLength']
       phpstan:
           ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/', '/deploy.php/']
-          configuration: vendor/lasselehtinen/laravel-conventions-checker/phpstan.neon          
-          level: 5          
+          configuration: vendor/lasselehtinen/laravel-conventions-checker/phpstan.neon
+          level: 5
           metadata: {priority: 300}
       phpmd:
-          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/']          
+          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/']
           ruleset: ['vendor/lasselehtinen/laravel-conventions-checker/ruleset.xml']
-          metadata: {priority: 200}          
+          metadata: {priority: 200}
       phpunit:
           metadata: {priority: 100}

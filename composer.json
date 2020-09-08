@@ -7,10 +7,10 @@
         "email": "lasse.lehtinen@iki.fi"
     }],
     "require": {
-        "phpro/grumphp": "^0.17",
-        "phpmd/phpmd": "^2.7",
+        "phpro/grumphp": "^0.22",
+        "phpmd/phpmd": "^2.9",
         "sensiolabs/security-checker": "^6.0",
-        "squizlabs/php_codesniffer": "^3.4",
-        "nunomaduro/larastan": "^0.5"
+        "squizlabs/php_codesniffer": "^3.5",
+        "nunomaduro/larastan": "^0.6"
     }
 }
