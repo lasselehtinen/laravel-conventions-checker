@@ -4,7 +4,7 @@
 Configuration for [grumphp](https://github.com/phpro/grumphp) that is checking on each commit that the committed code passes the unit tests, complies with the PSR2 coding style and static analysis check. It runs the following checks:
 
  - Check that composer.json is valid
- - Check that composer does not have any dependencies for known security vulnerabilities with [SensioLabs Security Checker](https://github.com/sensiolabs/security-checker)
+ - Check that composer does not have any dependencies for known security vulnerabilities with [Local PHP Security Checker](https://github.com/fabpot/local-php-security-checker)
 - Check that commit does not contain any debugging (var_dump, die, exit)
  - Check that code complies with the PSR2 coding style
  - Perform static code analysis using [phpstan](https://github.com/phpstan/phpstan)
@@ -18,7 +18,12 @@ Configuration for [grumphp](https://github.com/phpro/grumphp) that is checking o
 ```
 composer require --dev lasselehtinen/laravel-conventions-checker
 ```
-### 2. Add path to grumphp configuration file to your `composer.json`'s extra:
+
+### 2. Download Local PHP Security Checker
+
+Download a binary from the [Releases page on Github](https://github.com/fabpot/local-php-security-checker/releases), rename it to `local-php-security-checker` and make it executable.
+
+### 3. Add path to grumphp configuration file to your `composer.json`'s extra:
 
 ```
     "extra": {
