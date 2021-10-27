@@ -9,22 +9,28 @@ grumphp:
             - composer
             - phpcs
             - phpmd
+      syntax:
+	  tasks:
+            - phplint
       static:
           tasks:
             - phpstan
     tasks:
       composer:
-          metadata: {priority: 700}
+          metadata: {priority: 800}
       securitychecker_local:
-          metadata: {priority: 600}
+          metadata: {priority: 700}
       git_blacklist:
           keywords: [die(, var_dump(, exit;]
-          metadata: {priority: 500}
+          metadata: {priority: 600}
       phpcs:
           standard: PSR2
           whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/', , '/^test(.*)/']
-          metadata: {priority: 400}
+          metadata: {priority: 500}
           exclude: ['Generic.Files.LineLength']
+      phplint:
+          metadata: {priority: 400} 
+          triggered_by: ['php']
       phpstan:
           ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/', '/deploy.php/']
           configuration: vendor/lasselehtinen/laravel-conventions-checker/phpstan.neon
