@@ -10,7 +10,7 @@ grumphp:
             - phpcs
             - phpmd
       syntax:
-	  tasks:
+    tasks:
             - phplint
       static:
           tasks:
@@ -29,7 +29,7 @@ grumphp:
           metadata: {priority: 500}
           exclude: ['Generic.Files.LineLength']
       phplint:
-          metadata: {priority: 400} 
+          metadata: {priority: 400}
           triggered_by: ['php']
       phpstan:
           ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/', '/deploy.php/']
