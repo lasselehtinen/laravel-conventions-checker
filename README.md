@@ -5,7 +5,8 @@ Configuration for [grumphp](https://github.com/phpro/grumphp) that is checking o
 
  - Check that composer.json is valid
  - Check that composer does not have any dependencies for known security vulnerabilities with [Local PHP Security Checker](https://github.com/fabpot/local-php-security-checker)
-- Check that commit does not contain any debugging (var_dump, die, exit)
+ - Check that the PHP syntax is valid
+ - Check that commit does not contain any debugging (var_dump, die, exit)
  - Check that code complies with the PSR2 coding style
  - Perform static code analysis using [phpstan](https://github.com/phpstan/phpstan)
  - Check code for unnecessary complexity etc. with [PHP Mess Detector](https://github.com/phpmd/phpmd)
