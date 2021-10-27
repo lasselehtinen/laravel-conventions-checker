@@ -10,7 +10,7 @@ grumphp:
             - phpcs
             - phpmd
       syntax:
-    tasks:
+          tasks:
             - phplint
       static:
           tasks:
