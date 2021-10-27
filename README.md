@@ -33,8 +33,9 @@ Download a binary from the [Releases page on Github](https://github.com/fabpot/l
     }
 ```
 ## Test suites
-If you want to run the coding style or static analysis checks only, you can run the following commands:
+If you want to run the coding syntax, style or static analysis checks only, you can run the following commands:
 ```
+vendor/bin/grumphp run --testsuite=syntax
 vendor/bin/grumphp run --testsuite=style
 vendor/bin/grumphp run --testsuite=static
 ```
