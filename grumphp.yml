@@ -4,13 +4,17 @@ grumphp:
         succeeded: null
     process_timeout: 600
     testsuites:
+      security:
+          tasks:
+            - securitychecker_local
       style:
           tasks:
-            - composer
             - phpcs
             - phpmd
       syntax:
           tasks:
+            - composer
+            - git_blacklist
             - phplint
       static:
           tasks:
