@@ -32,7 +32,7 @@ grumphp:
           metadata: {priority: 400}
           triggered_by: ['php']
       phpstan:
-          ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/', '/deploy.php/']
+          ignore_patterns: ['/^tests(.*)/', '/^database(.*)/', '/^config(.*)/', '/^routes(.*)/', '/deploy.php/', '/^nova/src(.*)/',]
           configuration: vendor/lasselehtinen/laravel-conventions-checker/phpstan.neon
           level: 5
           metadata: {priority: 300}
