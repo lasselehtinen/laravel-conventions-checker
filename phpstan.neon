@@ -1,2 +1,2 @@
 includes:
-    - ../../nunomaduro/larastan/extension.neon
+    - ../../larastan/larastan/extension.neon
