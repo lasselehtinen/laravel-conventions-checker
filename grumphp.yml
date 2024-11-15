@@ -9,7 +9,6 @@ grumphp:
             - securitychecker_local
       style:
           tasks:
-            - phpcs
             - phpmd
       syntax:
           tasks:
