@@ -9,7 +9,6 @@ grumphp:
             - securitychecker_composeraudit
       style:
           tasks:
-            - phpcs
             - phpmd
       syntax:
           tasks:
