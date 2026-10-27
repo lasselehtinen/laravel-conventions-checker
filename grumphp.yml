@@ -28,7 +28,7 @@ grumphp:
           metadata: {priority: 600}
       phpcs:
           standard: PSR2
-          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/', , '/^test(.*)/']
+          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/', '/^test(.*)/']
           metadata: {priority: 500}
           exclude: ['Generic.Files.LineLength']
       phplint:
