@@ -15,8 +15,13 @@
 - CI workflow that installs the package into a fresh Laravel skeleton and runs all checks on PHP 8.2 - 8.6
 
 ### Changed
-- Security check uses `composer audit` instead of Local PHP Security Checker, which no longer needs to be downloaded
 - PHPMD no longer reports `ElseExpression` or `BooleanArgumentFlag`
+
+## v6.0.2 - 2026-10-27
+- Fixed an extra comma in the phpcs whitelist patterns
+
+## v6.0.1 - 2025-01-27
+- Security check uses `composer audit` instead of Local PHP Security Checker
 
 ## v6.0.0 - 2024-11-15
 - Updated to larastan/phpstan 2.0
