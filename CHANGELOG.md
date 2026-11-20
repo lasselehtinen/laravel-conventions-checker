@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (v7.0.0)
+## v7.0.0 - 2026-11-20
 
 ### Breaking changes
 - Requires PHP 8.2 or newer, `phpro/grumphp` ^2.27 and `larastan/larastan` ^3.15
