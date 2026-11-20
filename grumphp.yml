@@ -9,7 +9,8 @@ grumphp:
             - securitychecker_composeraudit
       style:
           tasks:
-            - phpmd
+            - phpmd3
+            - shell
       syntax:
           tasks:
             - composer
@@ -24,13 +25,13 @@ grumphp:
       securitychecker_composeraudit:
           metadata: {priority: 700}
       git_blacklist:
-          keywords: [die(, var_dump(, exit;]
+          # Calls to dd(), ddd(), dump(), ray(), var_dump(), die() and exit(), plus bare die; and exit;
+          # The leading group prevents matches such as add( or array(, but still catches $collection->dd()
+          keywords:
+            - '(^|[^[:alnum:]_])(dd|ddd|dump|ray|var_dump|die|exit)[[:space:]]*\('
+            - '(^|[^[:alnum:]_])(die|exit)[[:space:]]*;'
+          regexp_type: E
           metadata: {priority: 600}
-      phpcs:
-          standard: PSR2
-          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/', '/^test(.*)/']
-          metadata: {priority: 500}
-          exclude: ['Generic.Files.LineLength']
       phplint:
           metadata: {priority: 400}
           triggered_by: ['php']
@@ -39,7 +40,11 @@ grumphp:
           configuration: vendor/lasselehtinen/laravel-conventions-checker/phpstan.neon
           level: 5
           metadata: {priority: 300}
-      phpmd:
+      shell:
+          scripts:
+            - ["-c", "vendor/bin/pint --test"]
+          metadata: {priority: 250, label: pint}
+      phpmd3:
           whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/']
           ruleset: ['vendor/lasselehtinen/laravel-conventions-checker/ruleset.xml']
           metadata: {priority: 200}
