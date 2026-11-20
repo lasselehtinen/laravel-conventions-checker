@@ -45,7 +45,7 @@ grumphp:
             - ["-c", "vendor/bin/pint --test"]
           metadata: {priority: 250, label: pint}
       phpmd3:
-          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^recources(.*)/']
+          whitelist_patterns: ['/^app(.*)/', '/^config(.*)/', '/^resources(.*)/']
           ruleset: ['vendor/lasselehtinen/laravel-conventions-checker/ruleset.xml']
           metadata: {priority: 200}
       phpunit:

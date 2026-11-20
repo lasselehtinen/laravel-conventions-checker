@@ -1,26 +1,24 @@
 {
-   "name":"lasselehtinen/laravel-conventions-checker",
-   "description":"grumphp config to automatically check conventions for Laravel projects",
-   "license":"MIT",
-   "authors":[
-      {
-         "name":"Lasse Lehtinen",
-         "email":"lasse.lehtinen@iki.fi"
-      }
-   ],
-   "require":{
-      "php":"^8.2",
-      "phpro/grumphp":"^2.27",
-      "phpmd/phpmd":"^3.0",
-      "larastan/larastan":"^3.15",
-      "laravel/pint":"^1.13",
-      "php-parallel-lint/php-parallel-lint":"^1.4"
-   },
-   "minimum-stability": "dev",
-   "prefer-stable": true,
-   "config": {
-      "allow-plugins": {
-         "phpro/grumphp": false
-      }
-   }
+    "name": "lasselehtinen/laravel-conventions-checker",
+    "description": "grumphp config to automatically check conventions for Laravel projects",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lasse Lehtinen",
+            "email": "lasse.lehtinen@iki.fi"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "phpro/grumphp": "^2.27",
+        "phpmd/phpmd": "^3.0",
+        "larastan/larastan": "^3.15",
+        "laravel/pint": "^1.13",
+        "php-parallel-lint/php-parallel-lint": "^1.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": false
+        }
+    }
 }

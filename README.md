@@ -53,6 +53,26 @@ vendor/bin/grumphp git:init
 
 Code style is checked with `vendor/bin/pint --test`. Pint uses your project's `pint.json` if present, otherwise the Laravel preset. Run `vendor/bin/pint` to fix the issues automatically.
 
+Note that Pint checks the whole project, not just the committed files. When adding the checker to an existing project, run `vendor/bin/pint` once and commit the result, otherwise every commit will fail until the existing style issues are fixed.
+
+## Customizing the checks
+
+Instead of `config-default-path`, you can create a `grumphp.yml` in your project root that imports this configuration and overrides individual tasks. For example, to run tests with [Pest](https://pestphp.com) instead of PHPUnit:
+
+```yaml
+imports:
+    - { resource: vendor/lasselehtinen/laravel-conventions-checker/grumphp.yml }
+
+grumphp:
+    tasks:
+        phpunit:
+            metadata: {enabled: false}
+        pest:
+            metadata: {priority: 100}
+```
+
+Any task can be disabled the same way with `metadata: {enabled: false}`, or made non-blocking with `metadata: {blocking: false}`.
+
 ## Test suites
 If you want to run the coding syntax, style, static analysis or security checks only, you can run the following commands:
 ```

@@ -17,10 +17,14 @@
     </rule>
     <rule ref="rulesets/codesize.xml" />
     <rule ref="rulesets/cleancode.xml">
-    	<exclude name="StaticAccess"/>
-  	</rule>
-     <rule ref="rulesets/naming.xml">
+        <!-- Facades and Eloquent static calls are idiomatic Laravel -->
+        <exclude name="StaticAccess"/>
+        <!-- Common and readable in Laravel code, e.g. early returns are preferred but not enforced -->
+        <exclude name="ElseExpression"/>
+        <!-- Laravel's own APIs use boolean flags extensively, e.g. $request->boolean('x', false) -->
+        <exclude name="BooleanArgumentFlag"/>
+    </rule>
+    <rule ref="rulesets/naming.xml">
         <exclude name="ShortVariable"/>
     </rule>
-   
 </ruleset>
